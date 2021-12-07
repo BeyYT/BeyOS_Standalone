@@ -8,8 +8,9 @@ def prog():
     Data_Stable: List[str] = ['']
     nums=0;nums1=0;ans=0;count=0;prevans=0
     sr1=0;sr2=0;sr3=0;sr4=0;sr5=0
-    arraysel = [1,1,6,22,34,3,4,9,22,34]
+    arraysel = ['place instrution code here, delet the 1.', 1]
     anst = ""
+    ramvalue = ''
     # Check For Instructions
     # Num 1 Instructions
     while True:
@@ -108,13 +109,13 @@ def prog():
                 radio.send_string("Err 05")
             else:
                 prevans = ans
-                anst=str(num)+"."+(str(nums1))
+                anst=str(nums)+"."+(str(nums1))
                 ans=int(anst)
         if arraysel[count]==11:
-            nums1=ans
+            nums=ans
+            nums1 = 0
             ans=0
             prevans=0
-            num=0
         # Conversion from Ans to UTF-8 Chars via JS Key Codes
         if arraysel[count]==12:
             if ans==65:k="a"
@@ -216,6 +217,8 @@ def prog():
         if arraysel[count] == 36 and selectspot != 0 and selram != 0:
             selectspot = ans
             Data_Stable[selectspot] = ram[selram]
+        if arraysel[count] == 35.5:
+            ramvalue = ram[selram]
         if arraysel[count] == 37:
             ram = []
         # Sound Time!!!!

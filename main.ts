@@ -3,7 +3,6 @@
 //  Im Tired lol
 //  Gets Serial Data Instructions
 function prog() {
-    let num: number;
     let k: string;
     let initdatapass: number;
     let selectspot: number;
@@ -24,8 +23,9 @@ function prog() {
     let sr3 = 0
     let sr4 = 0
     let sr5 = 0
-    let arraysel = [1, 1, 6, 22, 34, 3, 4, 9, 22, 34]
+    let arraysel = ["place instrution code here, delet the 1.", 1]
     let anst = ""
+    let ramvalue = ""
     //  Check For Instructions
     //  Num 1 Instructions
     while (true) {
@@ -190,17 +190,17 @@ function prog() {
                 radio.sendString("Err 05")
             } else {
                 prevans = ans
-                anst = "" + num + "." + ("" + nums1)
+                anst = "" + nums + "." + ("" + nums1)
                 ans = parseInt(anst)
             }
             
         }
         
         if (arraysel[count] == 11) {
-            nums1 = ans
+            nums = ans
+            nums1 = 0
             ans = 0
             prevans = 0
-            num = 0
         }
         
         //  Conversion from Ans to UTF-8 Chars via JS Key Codes
@@ -427,6 +427,10 @@ function prog() {
         if (arraysel[count] == 36 && selectspot != 0 && selram != 0) {
             selectspot = ans
             Data_Stable[selectspot] = ram[selram]
+        }
+        
+        if (arraysel[count] == 35.5) {
+            ramvalue = ram[selram]
         }
         
         if (arraysel[count] == 37) {
