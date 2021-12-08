@@ -1,4 +1,3 @@
-
 # Init Instructions.
 # Please Mess With These
 # Im Tired lol
@@ -8,7 +7,7 @@ def prog():
     Data_Stable: List[str] = ['']
     nums=0;nums1=0;ans=0;count=0;prevans=0
     sr1=0;sr2=0;sr3=0;sr4=0;sr5=0
-    arraysel = ['place instrution code here, delet the 1.', 1]
+    arraysel = [1, 53, 54, 55, 56]
     anst = ""
     ramvalue = ''
     # Check For Instructions
@@ -278,8 +277,34 @@ def prog():
             radio.send_string("" + str(ans))
             basic.pause(1000)
             radio.send_number(ans)
-        count = count + 1
 
+        #Hummingbird Bit Instructions.
+
+        if arraysel[count] == 53:
+            hummingbird.set_led(ThreePort.ONE, 100)
+
+        if arraysel[count] == 54:
+            hummingbird.set_rotation_servo(FourPort.ONE, 100)
+            basic.pause(500)
+            hummingbird.set_rotation_servo(FourPort.ONE, 0)
+
+        
+        if arraysel[count] == 55:
+            hummingbird.set_position_servo(FourPort.TWO, 0)
+            basic.pause(500)
+            hummingbird.set_position_servo(FourPort.TWO, 180)
+        
+        if arraysel[count] == 56:
+        
+            while True:
+                val = hummingbird.get_sensor(SensorType.DIAL, ThreePort.THREE)
+                hummingbird.set_tri_led(TwoPort.ONE,val,0,0)
+
+        
+
+        count = count + 1           
+
+hummingbird.start_hummingbird()
 basic.show_icon(IconNames.DIAMOND)
 basic.show_icon(IconNames.SMALL_DIAMOND)
 basic.show_icon(IconNames.TARGET)

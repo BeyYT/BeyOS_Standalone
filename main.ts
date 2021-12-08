@@ -23,7 +23,7 @@ function prog() {
     let sr3 = 0
     let sr4 = 0
     let sr5 = 0
-    let arraysel = ["place instrution code here, delet the 1.", 1]
+    let arraysel = [1, 53, 54, 55, 56]
     let anst = ""
     let ramvalue = ""
     //  Check For Instructions
@@ -536,10 +536,35 @@ function prog() {
             radio.sendNumber(ans)
         }
         
+        // Hummingbird Bit Instructions.
+        if (arraysel[count] == 53) {
+            hummingbird.setLED(ThreePort.One, 100)
+        }
+        
+        if (arraysel[count] == 54) {
+            hummingbird.setRotationServo(FourPort.One, 100)
+            basic.pause(500)
+            hummingbird.setRotationServo(FourPort.One, 0)
+        }
+        
+        if (arraysel[count] == 55) {
+            hummingbird.setPositionServo(FourPort.Two, 0)
+            basic.pause(500)
+            hummingbird.setPositionServo(FourPort.Two, 180)
+        }
+        
+        if (arraysel[count] == 56) {
+            while (true) {
+                val = hummingbird.getSensor(SensorType.Dial, ThreePort.Three)
+                hummingbird.setTriLED(TwoPort.One, val, 0, 0)
+            }
+        }
+        
         count = count + 1
     }
 }
 
+hummingbird.startHummingbird()
 basic.showIcon(IconNames.Diamond)
 basic.showIcon(IconNames.SmallDiamond)
 basic.showIcon(IconNames.Target)
