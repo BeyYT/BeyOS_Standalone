@@ -1,4 +1,4 @@
-# this is mainly a test channel.
+# this is mainly a Cutting Edge channel, soon will turn into the developer channel and stable, just a test
 # use this if you want to program In BeyOS in makecode or on a single micro bit. 
 > Open this page at [https://beyyt.github.io/beyos_standalone/](https://beyyt.github.io/beyos_standalone/)
 
