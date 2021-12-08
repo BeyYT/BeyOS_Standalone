@@ -1,4 +1,5 @@
-
+# this is mainly a test channel.
+# use this if you want to program In BeyOS in makecode or on a single micro bit. 
 > Open this page at [https://beyyt.github.io/beyos_standalone/](https://beyyt.github.io/beyos_standalone/)
 
 ### BeyOS Is a Micro-Bit Operating System Kernel Made In Python.
