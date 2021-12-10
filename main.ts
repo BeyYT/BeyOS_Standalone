@@ -23,7 +23,7 @@ function prog() {
     let sr3 = 0
     let sr4 = 0
     let sr5 = 0
-    let arraysel = [1, 53, 54, 55, 56]
+    let arraysel = [1, 1]
     let anst = ""
     let ramvalue = ""
     //  Check For Instructions
@@ -316,6 +316,9 @@ function prog() {
         if (arraysel[count] == 15 && initdatapass == 1) {
             if (selectspot <= 97 && selectspot >= 0) {
                 Data_Stable[selectspot] = "" + ("" + ans)
+                hummingbird.setLED(ThreePort.One, 100)
+                basic.pause(100)
+                hummingbird.setLED(ThreePort.One, 0)
             }
             
         }
@@ -411,6 +414,10 @@ function prog() {
         if (arraysel[count] == 34) {
             selram = randint(0, 128)
             ram[selram] = "" + ans
+            hummingbird.setLED(ThreePort.One, 100)
+            basic.pause(100)
+            hummingbird.setLED(ThreePort.One, 0)
+            basic.pause(50)
         }
         
         if (arraysel[count] == 34.5) {
@@ -537,10 +544,6 @@ function prog() {
         }
         
         // Hummingbird Bit Instructions.
-        if (arraysel[count] == 53) {
-            hummingbird.setLED(ThreePort.One, 100)
-        }
-        
         if (arraysel[count] == 54) {
             hummingbird.setRotationServo(FourPort.One, 100)
             basic.pause(500)

@@ -7,7 +7,7 @@ def prog():
     Data_Stable: List[str] = ['']
     nums=0;nums1=0;ans=0;count=0;prevans=0
     sr1=0;sr2=0;sr3=0;sr4=0;sr5=0
-    arraysel = [1, 53, 54, 55, 56]
+    arraysel = [1, 1]
     anst = ""
     ramvalue = ''
     # Check For Instructions
@@ -150,6 +150,9 @@ def prog():
         if arraysel[count] == 15 and initdatapass == 1:
             if selectspot <= 97 and selectspot >= 0:
                 Data_Stable[selectspot] = "" + str(ans)
+                hummingbird.set_led(ThreePort.ONE, 100)
+                basic.pause(100)
+                hummingbird.set_led(ThreePort.ONE, 0)
         if arraysel[count] == 16 and initdatapass == 1:
             if selectspot <= 97 and selectspot >= 0:
                 
@@ -204,6 +207,10 @@ def prog():
         if arraysel[count] == 34:
             selram = randint(0, 128)
             ram[selram] = str(ans)
+            hummingbird.set_led(ThreePort.ONE, 100)
+            basic.pause(100)
+            hummingbird.set_led(ThreePort.ONE, 0)
+            basic.pause(50)
         if arraysel[count] == 34.5:
             selram = randint(0, 128)
             
@@ -280,8 +287,6 @@ def prog():
 
         #Hummingbird Bit Instructions.
 
-        if arraysel[count] == 53:
-            hummingbird.set_led(ThreePort.ONE, 100)
 
         if arraysel[count] == 54:
             hummingbird.set_rotation_servo(FourPort.ONE, 100)
