@@ -9,7 +9,7 @@
 # Specs
 
 - 52 Instructions
-- 96 Data Slots (16 For R+W, 48 For Ram)
+- 96 Data Slots (32 For R+W, 48 For Ram)
 - 2-4 MHZ Clock Speed
 - Up To 8kb Ram (Data Slots)
 - Up To 2 MB Programs!
