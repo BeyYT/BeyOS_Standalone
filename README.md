@@ -8,11 +8,11 @@
 
 # Specs
 
-- 64 Instructions
-- 64 Data Slots (16 For R+W, 48 For Ram)
+- 52 Instructions
+- 96 Data Slots (16 For R+W, 48 For Ram)
 - 2-4 MHZ Clock Speed
 - Up To 8kb Ram (Data Slots)
-- Up To 10 MB Programs!
+- Up To 2 MB Programs!
 
 This is an Open-Source Project Made By Me, Anyone Can Commit Changes and is highly recommended to do so
 
